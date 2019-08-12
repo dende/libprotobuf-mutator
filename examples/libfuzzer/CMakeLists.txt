@@ -40,7 +40,7 @@ foreach(fuzzer libfuzzer_example libfuzzer_bin_example)
   set_property(TARGET ${fuzzer}
                PROPERTY COMPILE_FLAGS ${FUZZING_FLAGS})
   set_property(TARGET ${fuzzer}
-               PROPERTY LINK_FLAGS ${FUZZING_FLAGS_BINARY})
+               PROPERTY LINK_FLAGS ${FUZZING_FLAGS_LIBFUZZER_BINARY})
   if(LIB_PROTO_MUTATOR_TESTING)
     add_dependencies(libfuzzer_example_test ${fuzzer})
   endif()
